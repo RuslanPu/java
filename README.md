@@ -1,2 +1,2 @@
 # java
-testing task  of java app for JavaMentor
+testing task for JavaMentor
