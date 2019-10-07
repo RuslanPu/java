@@ -11,8 +11,8 @@ public class MainProcess{
         //Try parse to arabian
         int chisloA = 0;
         int chisloB = 0;
-        chisloA = ArabianHelper.romanToDecimal(subStr[0]);
-        chisloB = ArabianHelper.romanToDecimal(subStr[2]);
+        chisloA = parseArabiantoInt.checkArabianSymbol(subStr[0]);
+        chisloB = parseArabiantoInt.checkArabianSymbol(subStr[2]);
 
         //Try parse to int
         if (chisloA == 0 || chisloB == 0)
