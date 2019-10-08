@@ -2,17 +2,19 @@ public class MainProcess{
     public static void Process(String x)
     {
         //separator on 3 elements
-        String[] subStr = x.split(" ");
+        String[] subStr = SeparatorInput.functionSeparate(x);
         if (subStr.length != 3)
         {
-            ErrorAndForceClose.ForceClose();
+            
+            ErrorAndForceClose.ForceClose("Separate error");
+            
         }
 
         //Try parse to arabian
         int chisloA = 0;
         int chisloB = 0;
-        chisloA = ArabianHelper.romanToDecimal(subStr[0]);
-        chisloB = ArabianHelper.romanToDecimal(subStr[2]);
+        chisloA = parseArabiantoInt.checkArabianSymbol(subStr[0]);
+        chisloB = parseArabiantoInt.checkArabianSymbol((subStr[2]));
 
         //Try parse to int
         if (chisloA == 0 || chisloB == 0)
@@ -24,14 +26,16 @@ public class MainProcess{
             }
             catch (NumberFormatException nfe)
             {
-                ErrorAndForceClose.ForceClose();
+                ErrorAndForceClose.ForceClose("ParseInt error");
+                
             }
         }
 
         //Check condition
         if (chisloA > 10 || chisloA < 1 || chisloB > 10 || chisloB < 1)
         {
-            ErrorAndForceClose.ForceClose();
+            ErrorAndForceClose.ForceClose("Condition error");
+            
         }
         //result from arithmetic operations
         int result = 0;

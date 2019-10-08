@@ -15,7 +15,7 @@ public class ArifmeticOperation{
                 result = chisloA / chisloB;
                 break;
             default:
-                ErrorAndForceClose.ForceClose();
+                ErrorAndForceClose.ForceClose("Arithmetic operation error");
         }
         return result;
     } 

@@ -1,7 +1,7 @@
 public class ErrorAndForceClose{
-    public static void ForceClose()
+    public static void ForceClose(String x)
     {
-        System.out.println("Something went wrong.");
+        System.out.println(x);
         System.exit(0);
     }
 }
