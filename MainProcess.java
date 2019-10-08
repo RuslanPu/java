@@ -3,12 +3,8 @@ public class MainProcess{
     {
         //separator on 3 elements
         String[] subStr = SeparatorInput.functionSeparate(x);
-        if (subStr.length != 3)
-        {
-            
-            ErrorAndForceClose.ForceClose("Separate error");
-            
-        }
+        CheckConditionForInput.conditionFoSeparate(subStr);
+       
 
         //Try parse to arabian
         int chisloA = 0;
@@ -31,12 +27,8 @@ public class MainProcess{
             }
         }
 
-        //Check condition
-        if (chisloA > 10 || chisloA < 1 || chisloB > 10 || chisloB < 1)
-        {
-            ErrorAndForceClose.ForceClose("Condition error");
-            
-        }
+        //Check condition conditionForNumberFromOneToTen
+        CheckConditionForInput.conditionForNumberFromOneToTen(chisloA,chisloB);
         //result from arithmetic operations
         int result = 0;
         result = ArifmeticOperation.resultOf(subStr[1],chisloA, chisloB, result);
